@@ -6,6 +6,8 @@ import {
   Mail,
   MousePointer2,
 } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const emailHref =
   'mailto:ethanhuynh365@gmail.com?subject=Website%20project%20inquiry';
@@ -55,7 +57,13 @@ export default function Home() {
     <main id="top">
       <header className="topbar page-grid">
         <a className="brand" href="#top" aria-label="Ethan Web Studio home">
-          <img src="/ethan-web-studio-logo.png" alt="" />
+          <Image
+            src="/ethan-web-studio-logo.png"
+            alt=""
+            width={38}
+            height={38}
+            priority
+          />
           <span>ETHAN / WEB STUDIO</span>
         </a>
 
@@ -172,7 +180,6 @@ export default function Home() {
               <h3>{service.title}</h3>
               <p>{service.copy}</p>
               <span className="service-tag">[{service.tag}]</span>
-              <ArrowRight aria-hidden="true" />
             </article>
           ))}
         </div>
@@ -197,7 +204,7 @@ export default function Home() {
         </div>
 
         <div className="prototype-stack">
-          <article className="prototype prototype-ember">
+          <Link href="/prototypes/ember-kitchen" className="prototype prototype-ember">
             <div className="prototype-rail">
               <span>PROTOTYPE_01</span>
               <span>HOSPITALITY</span>
@@ -221,9 +228,9 @@ export default function Home() {
               </div>
               <ExternalLink aria-hidden="true" />
             </footer>
-          </article>
+          </Link>
 
-          <article className="prototype prototype-northstar">
+          <Link href="/prototypes/northstar-services" className="prototype prototype-northstar">
             <div className="prototype-rail">
               <span>PROTOTYPE_02</span>
               <span>HOME SERVICES</span>
@@ -253,9 +260,9 @@ export default function Home() {
               </div>
               <ExternalLink aria-hidden="true" />
             </footer>
-          </article>
+          </Link>
 
-          <article className="prototype prototype-juniper">
+          <Link href="/prototypes/juniper-studio" className="prototype prototype-juniper">
             <div className="prototype-rail">
               <span>PROTOTYPE_03</span>
               <span>WELLNESS</span>
@@ -286,7 +293,7 @@ export default function Home() {
               </div>
               <ExternalLink aria-hidden="true" />
             </footer>
-          </article>
+          </Link>
         </div>
       </section>
 

@@ -486,7 +486,7 @@ a {
 .service-row {
   display: grid;
   min-height: 135px;
-  grid-template-columns: 70px 1.1fr 1.3fr 120px 40px;
+  grid-template-columns: 70px 1.1fr 1.3fr 120px;
   align-items: center;
   gap: 1.5rem;
   padding: 1rem 2rem;
@@ -527,15 +527,6 @@ a {
 
 .service-row:hover p {
   color: #44506a;
-}
-
-.service-row > svg {
-  width: 1rem;
-  transition: transform 140ms ease;
-}
-
-.service-row:hover > svg {
-  transform: translateX(8px);
 }
 
 .prototype-section {
@@ -1149,13 +1140,13 @@ a {
 
   .service-row {
     min-height: 170px;
-    grid-template-columns: 40px 1fr 24px;
+    grid-template-columns: 40px 1fr;
     gap: 0.75rem;
     padding: 1rem 1.2rem;
   }
 
   .service-row p {
-    grid-column: 2 / 4;
+    grid-column: 2 / -1;
   }
 
   .service-tag {
