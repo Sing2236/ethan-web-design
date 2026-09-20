@@ -1,17 +1,10 @@
 import {
-  ArrowDown,
-  ArrowUpRight,
+  ArrowDownRight,
+  ArrowRight,
   Check,
-  Code2,
-  Gauge,
-  LayoutTemplate,
+  ExternalLink,
   Mail,
-  MapPin,
-  MonitorSmartphone,
-  Search,
-  Settings2,
-  Sparkles,
-  Wrench,
+  MousePointer2,
 } from 'lucide-react';
 
 const emailHref =
@@ -19,336 +12,347 @@ const emailHref =
 
 const services = [
   {
-    icon: LayoutTemplate,
+    number: '01',
     title: 'New websites',
-    copy: 'A clean, custom site designed around your business and your customers.',
+    copy: 'A focused website built around what your customers need to see and do.',
+    tag: 'Design + build',
   },
   {
-    icon: MonitorSmartphone,
-    title: 'Mobile-friendly design',
-    copy: 'A polished experience that feels natural on phones, tablets, and desktops.',
+    number: '02',
+    title: 'Site redesigns',
+    copy: 'A sharper structure and visual system for a website that has fallen behind.',
+    tag: 'Refresh',
   },
   {
-    icon: Code2,
-    title: 'Easy no-code editing',
-    copy: 'Update your own words, photos, and key information without touching code.',
+    number: '03',
+    title: 'No-code editing',
+    copy: 'A simple editor so you can change your own text, photos, and key information.',
+    tag: 'Handoff',
   },
   {
-    icon: Sparkles,
-    title: 'Redesigns & updates',
-    copy: 'Modernize an older website or refresh individual pages, images, and content.',
+    number: '04',
+    title: 'Maintenance',
+    copy: 'Content changes, troubleshooting, speed fixes, and general website upkeep.',
+    tag: 'Support',
   },
   {
-    icon: Search,
-    title: 'Basic SEO setup',
-    copy: 'A strong technical foundation that helps search engines understand your site.',
-  },
-  {
-    icon: Wrench,
-    title: 'Maintenance & fixes',
-    copy: 'General upkeep, troubleshooting, speed improvements, and small repairs.',
+    number: '05',
+    title: 'Local essentials',
+    copy: 'Contact forms, booking tools, maps, social links, and basic search setup.',
+    tag: 'Integrations',
   },
 ];
 
-const extras = [
-  'Contact and quote-request forms',
-  'Appointment and booking integrations',
-  'Social media and Google Maps integration',
-  'Domain and hosting setup assistance',
+const buildSteps = [
+  ['01', 'Listen', 'Your business, customers, and goals.'],
+  ['02', 'Design', 'A clear direction before the full build.'],
+  ['03', 'Build', 'Responsive, fast, and easy to manage.'],
+  ['04', 'Launch', 'Final checks, handoff, and support.'],
 ];
 
 export default function Home() {
   return (
-    <main>
-      <div className="ambient ambient-one" aria-hidden="true" />
-      <div className="ambient ambient-two" aria-hidden="true" />
-
-      <header className="site-header shell">
-        <a className="wordmark" href="#top" aria-label="Ethan Web Studio home">
-          <span className="wordmark-mark">
-            <img src="/ethan-web-studio-logo.png" alt="" />
-          </span>
-          <span>Ethan Web Studio</span>
+    <main id="top">
+      <header className="topbar page-grid">
+        <a className="brand" href="#top" aria-label="Ethan Web Studio home">
+          <img src="/ethan-web-studio-logo.png" alt="" />
+          <span>ETHAN / WEB STUDIO</span>
         </a>
 
+        <div className="availability">
+          <span className="signal" /> AVAILABLE FOR PROJECTS
+        </div>
+
         <nav aria-label="Main navigation">
-          <a href="#services">Services</a>
-          <a href="#work">Examples</a>
-          <a className="nav-contact" href={emailHref}>
-            Email me <ArrowUpRight aria-hidden="true" />
+          <a href="#capabilities">CAPABILITIES</a>
+          <a href="#prototypes">PROTOTYPES</a>
+          <a className="email-link" href={emailHref}>
+            EMAIL ME <ArrowRight aria-hidden="true" />
           </a>
         </nav>
       </header>
 
-      <section className="hero shell" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="status-dot" /> Dallas–Fort Worth web design
-          </p>
+      <section className="hero page-grid">
+        <div className="hero-index blueprint-label">
+          <span>PROJECT TYPE</span>
+          <strong>SMALL BUSINESS WEB</strong>
+          <span>REGION</span>
+          <strong>DALLAS–FORT WORTH</strong>
+        </div>
+
+        <div className="hero-main">
+          <p className="kicker">INDEPENDENT DESIGN + DEVELOPMENT</p>
           <h1>
-            A better website,
-            <span> without the agency overhead.</span>
+            WEBSITES
+            <span>BUILT LIKE</span>
+            THEY MATTER.
           </h1>
-          <p className="hero-lede">
-            Modern websites for small businesses—built to look sharp, work on
-            every screen, and stay easy for you to update.
-          </p>
-          <div className="hero-actions">
-            <a className="primary-button" href={emailHref}>
-              Start a conversation <Mail aria-hidden="true" />
-            </a>
-            <a className="text-link" href="#work">
-              See example sites <ArrowDown aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-
-        <div className="hero-showcase" aria-label="Website design preview">
-          <div className="browser-window">
-            <div className="browser-bar">
-              <div className="traffic-lights" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </div>
-              <div className="address-bar">yourbusiness.com</div>
-            </div>
-            <div className="browser-content">
-              <div className="preview-nav">
-                <span>STUDIO</span>
-                <div>
-                  <i />
-                  <i />
-                  <i />
-                </div>
-              </div>
-              <div className="preview-hero">
-                <p>Made for your customers.</p>
-                <strong>Clear. Modern. Yours.</strong>
-                <span className="preview-button">Get started</span>
-              </div>
-              <div className="preview-grid">
-                <span />
-                <span />
-                <span />
-              </div>
-            </div>
-          </div>
-
-          <div className="floating-note note-top">
-            <Gauge aria-hidden="true" />
-            <span>
-              <small>Built for</small>
-              Speed
-            </span>
-          </div>
-          <div className="floating-note note-bottom">
-            <Settings2 aria-hidden="true" />
-            <span>
-              <small>Made to be</small>
-              Easy to edit
-            </span>
-          </div>
-        </div>
-      </section>
-
-      <section className="trust-strip shell" aria-label="Service highlights">
-        <p>Everything you need to launch confidently</p>
-        <div>
-          <span>
-            <Check aria-hidden="true" /> Mobile-ready
-          </span>
-          <span>
-            <Check aria-hidden="true" /> No-code editing
-          </span>
-          <span>
-            <Check aria-hidden="true" /> Six months of support
-          </span>
-        </div>
-      </section>
-
-      <section className="section shell" id="services">
-        <div className="section-heading">
-          <p className="eyebrow">What I can help with</p>
-          <h2>From first idea to ongoing updates.</h2>
-          <p>
-            Need a brand-new site, a cleaner version of your current one, or
-            help keeping things running? I can meet you where you are.
-          </p>
-        </div>
-
-        <div className="service-grid">
-          {services.map(({ icon: Icon, title, copy }) => (
-            <article className="glass-card service-card" key={title}>
-              <span className="icon-wrap">
-                <Icon aria-hidden="true" />
+          <div className="hero-summary">
+            <p>
+              Custom websites for small businesses. Clear to use, easy to
+              update, and backed by six months of support after launch.
+            </p>
+            <a className="action-link" href={emailHref}>
+              START A PROJECT
+              <span>
+                <ArrowDownRight aria-hidden="true" />
               </span>
-              <h3>{title}</h3>
-              <p>{copy}</p>
+            </a>
+          </div>
+        </div>
+
+        <aside className="build-console" aria-label="Website build status">
+          <div className="console-title">
+            <span>BUILD_LOG.TXT</span>
+            <span className="console-status">LIVE</span>
+          </div>
+          <div className="console-screen">
+            <p>
+              <span>01</span> DEFINE THE GOAL
+            </p>
+            <p>
+              <span>02</span> DESIGN THE SYSTEM
+            </p>
+            <p>
+              <span>03</span> BUILD FOR EVERY SCREEN
+            </p>
+            <p>
+              <span>04</span> HAND OVER CONTROL
+            </p>
+            <div className="assembly-view" aria-hidden="true">
+              <i className="block block-a" />
+              <i className="block block-b" />
+              <i className="block block-c" />
+              <i className="block block-d" />
+              <MousePointer2 />
+            </div>
+          </div>
+          <div className="console-footer">
+            <span>OUTPUT: YOURBUSINESS.COM</span>
+            <span>READY_</span>
+          </div>
+        </aside>
+
+        <div className="hero-coordinate coordinate-one">X: 032 / Y: 118</div>
+        <div className="hero-coordinate coordinate-two">SYSTEM 01.26</div>
+      </section>
+
+      <div className="marquee" aria-label="Website benefits">
+        <div>
+          <span>NO AGENCY MARKUP</span>
+          <b>+</b>
+          <span>MOBILE READY</span>
+          <b>+</b>
+          <span>NO-CODE EDITING</span>
+          <b>+</b>
+          <span>SIX MONTHS SUPPORT</span>
+          <b>+</b>
+          <span>BUILT FOR YOUR BUSINESS</span>
+          <b>+</b>
+        </div>
+      </div>
+
+      <section className="capabilities page-grid" id="capabilities">
+        <div className="section-code blueprint-label">
+          <span>SECTION</span>
+          <strong>CAPABILITIES</strong>
+          <span>ITEMS</span>
+          <strong>05</strong>
+        </div>
+
+        <div className="section-intro">
+          <p className="kicker">WHAT I CAN DO</p>
+          <h2>THE WORK, WITHOUT THE RUNAROUND.</h2>
+        </div>
+
+        <div className="service-list">
+          {services.map((service) => (
+            <article className="service-row" key={service.number}>
+              <span className="service-number">{service.number}</span>
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
+              <span className="service-tag">[{service.tag}]</span>
+              <ArrowRight aria-hidden="true" />
             </article>
           ))}
         </div>
-
-        <div className="extras-card glass-card">
-          <div>
-            <span className="icon-wrap">
-              <Settings2 aria-hidden="true" />
-            </span>
-            <h3>And the details that make it complete.</h3>
-          </div>
-          <ul>
-            {extras.map((extra) => (
-              <li key={extra}>
-                <Check aria-hidden="true" /> {extra}
-              </li>
-            ))}
-          </ul>
-        </div>
       </section>
 
-      <section className="section work-section" id="work">
-        <div className="shell">
-          <div className="section-heading work-heading">
-            <p className="eyebrow">Example directions</p>
-            <h2>Small sites can still make a big impression.</h2>
-            <p>
-              A few sample concepts showing the range of styles I can create
-              for different kinds of local businesses.
+      <section className="prototype-section" id="prototypes">
+        <div className="page-grid prototype-heading">
+          <div className="section-code blueprint-label">
+            <span>SECTION</span>
+            <strong>PROTOTYPE LIBRARY</strong>
+            <span>STATUS</span>
+            <strong>CONCEPT WORK</strong>
+          </div>
+          <div className="section-intro">
+            <p className="kicker">EXAMPLE DIRECTIONS</p>
+            <h2>THREE BUSINESSES. THREE DIFFERENT ANSWERS.</h2>
+            <p className="section-copy">
+              These are design studies, not recycled templates or fake client
+              claims. Your site gets its own direction.
             </p>
           </div>
+        </div>
 
-          <div className="work-grid">
-            <article className="work-card">
-              <div className="site-preview cafe-preview">
-                <div className="mini-nav">
-                  <b>EMBER</b>
-                  <span>Menu&nbsp;&nbsp; Visit</span>
-                </div>
-                <div className="mini-copy">
-                  <small>NEIGHBORHOOD KITCHEN</small>
-                  <strong>Comfort, served daily.</strong>
-                  <i>View the menu</i>
-                </div>
-                <div className="cafe-orb" aria-hidden="true" />
+        <div className="prototype-stack">
+          <article className="prototype prototype-ember">
+            <div className="prototype-rail">
+              <span>PROTOTYPE_01</span>
+              <span>HOSPITALITY</span>
+            </div>
+            <div className="prototype-browser">
+              <div className="proto-nav">
+                <b>EMBER / KITCHEN</b>
+                <span>MENU&nbsp;&nbsp;&nbsp; STORY&nbsp;&nbsp;&nbsp; VISIT</span>
               </div>
-              <div className="work-meta">
-                <div>
-                  <span>Restaurant concept</span>
-                  <h3>Ember Kitchen</h3>
-                </div>
-                <ArrowUpRight aria-hidden="true" />
+              <div className="ember-copy">
+                <small>OPEN DAILY / OAK CLIFF</small>
+                <strong>Comfort food.<br />Done properly.</strong>
+                <i>VIEW TODAY’S MENU</i>
               </div>
-            </article>
+              <div className="ember-type" aria-hidden="true">E</div>
+            </div>
+            <footer>
+              <div>
+                <span>RESTAURANT CONCEPT</span>
+                <h3>Ember Kitchen</h3>
+              </div>
+              <ExternalLink aria-hidden="true" />
+            </footer>
+          </article>
 
-            <article className="work-card">
-              <div className="site-preview trade-preview">
-                <div className="mini-nav">
-                  <b>NORTHSTAR</b>
-                  <span>Services&nbsp;&nbsp; About</span>
-                </div>
-                <div className="trade-layout">
-                  <div className="mini-copy">
-                    <small>DFW HOME SERVICES</small>
-                    <strong>Good work. No runaround.</strong>
-                    <i>Request a quote</i>
-                  </div>
-                  <div className="rating-card">
-                    <b>4.9</b>
-                    <span>★★★★★</span>
-                    <small>Trusted locally</small>
-                  </div>
-                </div>
+          <article className="prototype prototype-northstar">
+            <div className="prototype-rail">
+              <span>PROTOTYPE_02</span>
+              <span>HOME SERVICES</span>
+            </div>
+            <div className="prototype-browser">
+              <div className="proto-nav">
+                <b>NORTHSTAR</b>
+                <span>SERVICES&nbsp;&nbsp;&nbsp; REVIEWS&nbsp;&nbsp;&nbsp; CONTACT</span>
               </div>
-              <div className="work-meta">
+              <div className="northstar-grid">
                 <div>
-                  <span>Home services concept</span>
-                  <h3>Northstar Services</h3>
+                  <small>DFW HOME SERVICES</small>
+                  <strong>Good work.<br />No runaround.</strong>
+                  <i>REQUEST A QUOTE</i>
                 </div>
-                <ArrowUpRight aria-hidden="true" />
+                <div className="metric-block">
+                  <span>LOCAL RATING</span>
+                  <b>4.9</b>
+                  <small>★★★★★ / VERIFIED</small>
+                </div>
               </div>
-            </article>
+            </div>
+            <footer>
+              <div>
+                <span>TRADES CONCEPT</span>
+                <h3>Northstar Services</h3>
+              </div>
+              <ExternalLink aria-hidden="true" />
+            </footer>
+          </article>
 
-            <article className="work-card">
-              <div className="site-preview wellness-preview">
-                <div className="mini-nav">
-                  <b>JUNIPER</b>
-                  <span>Care&nbsp;&nbsp; Journal</span>
-                </div>
-                <div className="mini-copy wellness-copy">
-                  <small>WELLNESS, SIMPLIFIED</small>
-                  <strong>Make space to feel better.</strong>
-                  <i>Book a visit</i>
-                </div>
-                <div className="leaf-shape leaf-one" aria-hidden="true" />
-                <div className="leaf-shape leaf-two" aria-hidden="true" />
+          <article className="prototype prototype-juniper">
+            <div className="prototype-rail">
+              <span>PROTOTYPE_03</span>
+              <span>WELLNESS</span>
+            </div>
+            <div className="prototype-browser">
+              <div className="proto-nav">
+                <b>JUNIPER—STUDIO</b>
+                <span>CARE&nbsp;&nbsp;&nbsp; TEAM&nbsp;&nbsp;&nbsp; JOURNAL</span>
               </div>
-              <div className="work-meta">
-                <div>
-                  <span>Wellness concept</span>
-                  <h3>Juniper Studio</h3>
+              <div className="juniper-layout">
+                <div className="juniper-copy">
+                  <small>A QUIETER KIND OF CARE</small>
+                  <strong>Make space<br />to feel better.</strong>
+                  <i>BOOK A VISIT</i>
                 </div>
-                <ArrowUpRight aria-hidden="true" />
+                <div className="juniper-poster" aria-hidden="true">
+                  <span>J</span>
+                  <i>01 / REST</i>
+                  <i>02 / RESET</i>
+                  <i>03 / RETURN</i>
+                </div>
               </div>
-            </article>
-          </div>
-          <p className="concept-note">
-            Sample concepts created to demonstrate design range—not client work.
-          </p>
+            </div>
+            <footer>
+              <div>
+                <span>WELLNESS CONCEPT</span>
+                <h3>Juniper Studio</h3>
+              </div>
+              <ExternalLink aria-hidden="true" />
+            </footer>
+          </article>
         </div>
       </section>
 
-      <section className="support-section shell">
-        <div className="support-card">
-          <div className="support-number">6</div>
-          <div className="support-copy">
-            <p className="eyebrow">After launch</p>
-            <h2>Six months of support, included.</h2>
-            <p>
-              I’ll stay available after your site goes live for minor updates,
-              questions, and help learning how everything works.
-            </p>
-          </div>
-          <div className="support-list">
-            <span>
-              <Check aria-hidden="true" /> Minor content updates
-            </span>
-            <span>
-              <Check aria-hidden="true" /> Troubleshooting help
-            </span>
-            <span>
-              <Check aria-hidden="true" /> Editor guidance
-            </span>
-          </div>
+      <section className="process page-grid">
+        <div className="section-code blueprint-label">
+          <span>SECTION</span>
+          <strong>WORKFLOW</strong>
+          <span>STAGES</span>
+          <strong>04</strong>
+        </div>
+
+        <div className="section-intro process-intro">
+          <p className="kicker">HOW IT GETS BUILT</p>
+          <h2>YOU ALWAYS KNOW WHAT’S NEXT.</h2>
+        </div>
+
+        <div className="process-list">
+          {buildSteps.map(([number, title, copy]) => (
+            <div className="process-step" key={number}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{copy}</p>
+              <i />
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="cta-section shell">
-        <div className="cta-card">
-          <div className="cta-orb" aria-hidden="true" />
-          <p className="eyebrow">Let’s build something useful</p>
-          <h2>Tell me what your business needs.</h2>
+      <section className="support-block page-grid">
+        <div className="support-code">
+          <span>AFTERCARE_PROTOCOL</span>
+          <span>ACTIVE</span>
+        </div>
+        <div className="support-number">6M</div>
+        <div className="support-message">
+          <p className="kicker">AFTER LAUNCH</p>
+          <h2>SUPPORT IS PART OF THE BUILD.</h2>
           <p>
-            Send a quick email about your business, your current website, and
-            what you would like to improve. I’ll take it from there.
+            Six months of help with minor content updates, troubleshooting,
+            and learning how to manage your new site.
           </p>
-          <a className="primary-button light-button" href={emailHref}>
-            <Mail aria-hidden="true" /> ethanhuynh365@gmail.com
+        </div>
+        <ul>
+          <li><Check aria-hidden="true" /> MINOR CONTENT UPDATES</li>
+          <li><Check aria-hidden="true" /> TROUBLESHOOTING</li>
+          <li><Check aria-hidden="true" /> EDITOR GUIDANCE</li>
+        </ul>
+      </section>
+
+      <section className="contact-section">
+        <div className="contact-coordinates">32.7767° N / 96.7970° W</div>
+        <div className="contact-inner">
+          <p className="kicker">READY WHEN YOU ARE</p>
+          <h2>LET’S BUILD<br />YOUR SITE.</h2>
+          <a href={emailHref}>
+            <Mail aria-hidden="true" />
+            <span>ETHANHUYNH365@GMAIL.COM</span>
+            <ArrowRight aria-hidden="true" />
           </a>
         </div>
+        <div className="contact-footer">
+          <span>© 2026 ETHAN WEB STUDIO</span>
+          <span>DALLAS–FORT WORTH / REMOTE</span>
+          <a href="#top">BACK TO TOP ↑</a>
+        </div>
       </section>
-
-      <footer className="site-footer shell">
-        <a className="wordmark" href="#top">
-          <span className="wordmark-mark">
-            <img src="/ethan-web-studio-logo.png" alt="" />
-          </span>
-          <span>Ethan Web Studio</span>
-        </a>
-        <p>
-          <MapPin aria-hidden="true" /> Serving Dallas–Fort Worth and beyond
-        </p>
-        <a href={emailHref}>Email me</a>
-      </footer>
     </main>
   );
 }
