@@ -127,10 +127,7 @@ export default function Home() {
             </p>
             <a className="console-email-cta" href={emailHref}>
               <Mail aria-hidden="true" />
-              <span>
-                <strong>EMAIL HDD</strong>
-                <small>ETHANHUYNH365@GMAIL.COM</small>
-              </span>
+              <strong>EMAIL HDD</strong>
               <ArrowRight aria-hidden="true" />
             </a>
           </div>

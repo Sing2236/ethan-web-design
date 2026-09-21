@@ -381,27 +381,10 @@ a {
   height: 1.25rem;
 }
 
-.console-email-cta span {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.console-email-cta strong,
-.console-email-cta small {
-  font-family: var(--font-geist-mono), monospace;
-  letter-spacing: 0.08em;
-}
-
 .console-email-cta strong {
+  font-family: var(--font-geist-mono), monospace;
   font-size: 0.95rem;
-}
-
-.console-email-cta small {
-  overflow-wrap: anywhere;
-  color: var(--ice);
-  font-size: 0.55rem;
+  letter-spacing: 0.08em;
 }
 
 .console-footer {
