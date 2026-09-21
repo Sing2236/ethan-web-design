@@ -51,6 +51,61 @@ const buildSteps = [
   ['04', 'Launch', 'Final checks, handoff, and support.'],
 ];
 
+const pricingOptions = [
+  {
+    eyebrow: 'WEBSITE LAUNCH',
+    price: '$100+',
+    cadence: 'ONE TIME',
+    description:
+      'A focused, responsive website shaped around your business and the actions you want visitors to take.',
+    features: [
+      'CUSTOM PAGE DIRECTION',
+      'MOBILE + DESKTOP BUILD',
+      'DOMAIN CONNECTION',
+      'FOUNDATIONAL SEO',
+    ],
+  },
+  {
+    eyebrow: 'SITE CARE',
+    price: '$25',
+    cadence: '/ MONTH',
+    description:
+      'Ongoing help after the included six-month support window, for businesses that want their site looked after.',
+    features: [
+      'SMALL CONTENT CHANGES',
+      'ROUTINE SITE CHECKS',
+      'HOSTING + SSL OVERSIGHT',
+      'EMAIL SUPPORT',
+    ],
+  },
+  {
+    eyebrow: 'SEARCH GROWTH',
+    price: '$75+',
+    cadence: '/ MONTH',
+    description:
+      'A steady program for improving how your website is understood, discovered, and measured over time.',
+    features: [
+      'ON-PAGE SEO IMPROVEMENTS',
+      'SEARCH OPPORTUNITY REVIEW',
+      'TRAFFIC CHECK-IN',
+      'MONTHLY PRIORITIES',
+    ],
+  },
+  {
+    eyebrow: 'CONTENT STARTER PACK',
+    price: '$95',
+    cadence: 'ONE TIME',
+    description:
+      'A concise writing pass that gives your most important page a clearer message and stronger next step.',
+    features: [
+      'HOMEPAGE MESSAGE REVIEW',
+      'SERVICE COPY POLISH',
+      'CALL-TO-ACTION WRITING',
+      'ONE REVISION ROUND',
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <main id="top">
@@ -72,6 +127,7 @@ export default function Home() {
         <nav aria-label="Main navigation">
           <a href="#capabilities">CAPABILITIES</a>
           <a href="#prototypes">PROTOTYPES</a>
+          <a href="#pricing">PRICING</a>
           <a className="email-link" href={emailHref}>
             EMAIL ME <ArrowRight aria-hidden="true" />
           </a>
@@ -337,6 +393,53 @@ export default function Home() {
           <li><Check aria-hidden="true" /> TROUBLESHOOTING</li>
           <li><Check aria-hidden="true" /> EDITOR GUIDANCE</li>
         </ul>
+      </section>
+
+      <section className="pricing-section page-grid" id="pricing">
+        <div className="pricing-header">
+          <div>
+            <p className="kicker">CLEAR STARTING POINTS</p>
+            <h2>PRICING THAT FITS THE WORK.</h2>
+          </div>
+          <div className="pricing-summary">
+            <p>
+              Rates stay competitive without forcing every project into the
+              same package. Your quote reflects the pages, features, and
+              support your business actually needs, with scheduled payment
+              options available.
+            </p>
+            <a href={emailHref}>
+              REQUEST A QUOTE <ArrowRight aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+
+        <div className="pricing-grid">
+          {pricingOptions.map((option) => (
+            <article className="pricing-card" key={option.eyebrow}>
+              <p className="pricing-eyebrow">{option.eyebrow}</p>
+              <div className="pricing-amount">
+                <strong>{option.price}</strong>
+                <span>{option.cadence}</span>
+              </div>
+              <p className="pricing-description">{option.description}</p>
+              <ul>
+                {option.features.map((feature) => (
+                  <li key={feature}>
+                    <Check aria-hidden="true" /> {feature}
+                  </li>
+                ))}
+              </ul>
+              <a href={emailHref}>
+                ASK ABOUT THIS <ArrowRight aria-hidden="true" />
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <p className="pricing-note">
+          FINAL WEBSITE QUOTES VARY WITH SCOPE, FUNCTIONALITY, AND INTEGRATIONS.
+        </p>
       </section>
 
       <section className="contact-section">
