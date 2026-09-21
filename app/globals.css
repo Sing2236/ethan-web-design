@@ -92,9 +92,9 @@ a {
 }
 
 .brand img {
-  width: 2.35rem;
-  height: 2.35rem;
-  padding: 0.2rem;
+  width: 9.5rem;
+  height: 3rem;
+  padding: 0.35rem 0.55rem;
   border: 1px solid var(--line);
   background: #fff;
   object-fit: contain;
@@ -347,60 +347,61 @@ a {
   color: var(--violet);
 }
 
-.assembly-view {
-  position: relative;
-  min-height: 260px;
+.console-email-cta {
+  display: grid;
+  min-height: 150px;
   margin-top: 2.2rem;
-  border: 1px solid var(--line);
-  background-image:
-    linear-gradient(rgba(84, 114, 180, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(84, 114, 180, 0.12) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
-.assembly-view::before,
-.assembly-view::after {
-  position: absolute;
-  background: #223151;
-  content: '';
-}
-
-.assembly-view::before {
-  top: 22px;
-  left: 22px;
-  width: 42%;
-  height: 5px;
-}
-
-.assembly-view::after {
-  top: 36px;
-  left: 22px;
-  width: 24%;
-  height: 5px;
-}
-
-.assembly-view .block {
-  position: absolute;
-  display: block;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
   border: 1px solid var(--blue);
-  background: rgba(40, 120, 255, 0.13);
+  background: rgba(40, 120, 255, 0.12);
+  color: #fff;
+  transition:
+    background 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
-.block-a { top: 68px; left: 22px; width: calc(60% - 28px); height: 72px; }
-.block-b { top: 68px; right: 22px; width: calc(40% - 28px); height: 72px; border-color: var(--violet) !important; }
-.block-c { bottom: 22px; left: 22px; width: calc(35% - 20px); height: 70px; }
-.block-d { bottom: 22px; right: 22px; width: calc(65% - 30px); height: 70px; }
+.console-email-cta:hover {
+  background: rgba(40, 120, 255, 0.22);
+  box-shadow: 0 0 28px rgba(40, 120, 255, 0.2);
+  transform: translateY(-2px);
+}
 
-.assembly-view svg {
-  position: absolute;
-  right: 12%;
-  bottom: 17%;
-  width: 2.5rem;
-  height: 2.5rem;
-  fill: #fff;
+.console-email-cta > svg:first-child {
+  width: 2rem;
+  height: 2rem;
   color: var(--blue);
-  filter: drop-shadow(0 0 12px var(--blue));
-  transform: rotate(-10deg);
+}
+
+.console-email-cta > svg:last-child {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.console-email-cta span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.console-email-cta strong,
+.console-email-cta small {
+  font-family: var(--font-geist-mono), monospace;
+  letter-spacing: 0.08em;
+}
+
+.console-email-cta strong {
+  font-size: 0.95rem;
+}
+
+.console-email-cta small {
+  overflow-wrap: anywhere;
+  color: var(--ice);
+  font-size: 0.55rem;
 }
 
 .console-footer {

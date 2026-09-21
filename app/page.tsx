@@ -4,7 +4,6 @@ import {
   Check,
   ExternalLink,
   Mail,
-  MousePointer2,
 } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -56,15 +55,14 @@ export default function Home() {
   return (
     <main id="top">
       <header className="topbar page-grid">
-        <a className="brand" href="#top" aria-label="Ethan Web Studio home">
+        <a className="brand" href="#top" aria-label="HDD — Huynh Digital DFW home">
           <Image
-            src="/ethan-web-studio-logo.png"
+            src="/hdd-logo.png"
             alt=""
-            width={38}
-            height={38}
+            width={1050}
+            height={475}
             priority
           />
-          <span>ETHAN / WEB STUDIO</span>
         </a>
 
         <div className="availability">
@@ -127,13 +125,14 @@ export default function Home() {
             <p>
               <span>04</span> HAND OVER CONTROL
             </p>
-            <div className="assembly-view" aria-hidden="true">
-              <i className="block block-a" />
-              <i className="block block-b" />
-              <i className="block block-c" />
-              <i className="block block-d" />
-              <MousePointer2 />
-            </div>
+            <a className="console-email-cta" href={emailHref}>
+              <Mail aria-hidden="true" />
+              <span>
+                <strong>EMAIL HDD</strong>
+                <small>ETHANHUYNH365@GMAIL.COM</small>
+              </span>
+              <ArrowRight aria-hidden="true" />
+            </a>
           </div>
           <div className="console-footer">
             <span>OUTPUT: YOURBUSINESS.COM</span>
@@ -355,7 +354,7 @@ export default function Home() {
           </a>
         </div>
         <div className="contact-footer">
-          <span>© 2026 ETHAN WEB STUDIO</span>
+          <span>© 2026 HDD / HUYNH DIGITAL DFW</span>
           <span>DALLAS–FORT WORTH / REMOTE</span>
           <a href="#top">BACK TO TOP ↑</a>
         </div>

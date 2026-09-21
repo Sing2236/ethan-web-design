@@ -5,7 +5,7 @@ import Link from 'next/link';
 import './ember-kitchen.css';
 
 export const metadata: Metadata = {
-  title: 'Ember Kitchen | Prototype — Ethan Web Studio',
+  title: 'Ember Kitchen | Prototype — HDD',
   description:
     'Design study for a neighborhood restaurant: warm, editorial, appetite-first.',
 };
@@ -69,7 +69,7 @@ export default function EmberKitchenPage() {
     <div className="ek">
       <header className="ek-header">
         <Link href="/#prototypes" className="ek-back">
-          ← BACK TO ETHAN WEB STUDIO
+          ← BACK TO HDD
         </Link>
         <div className="ek-wordmark">
           Ember <span>KITCHEN</span>
@@ -261,7 +261,7 @@ export default function EmberKitchenPage() {
 
       <footer className="ek-footer">
         <span>© 2026 EMBER KITCHEN</span>
-        <span>DESIGN STUDY BY ETHAN WEB STUDIO</span>
+        <span>DESIGN STUDY BY HDD / HUYNH DIGITAL DFW</span>
       </footer>
     </div>
   );

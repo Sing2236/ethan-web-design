@@ -12,7 +12,7 @@ import Link from 'next/link';
 import './northstar-services.css';
 
 export const metadata: Metadata = {
-  title: 'Northstar Services | Prototype — Ethan Web Studio',
+  title: 'Northstar Services | Prototype — HDD',
   description:
     'Design study for a home services company: clean, trust-driven, quote-first.',
 };
@@ -96,7 +96,7 @@ export default function NorthstarServicesPage() {
       <header className="ns-header">
         <div className="ns-shell" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
           <Link href="/#prototypes" className="ns-back">
-            ← BACK TO ETHAN WEB STUDIO
+            ← BACK TO HDD
           </Link>
           <div className="ns-logo">
             <span className="ns-logo-mark">N</span>
@@ -345,7 +345,7 @@ export default function NorthstarServicesPage() {
           </div>
           <div className="ns-footer-bottom">
             <span>© 2026 NORTHSTAR SERVICES</span>
-            <span>DESIGN STUDY BY ETHAN WEB STUDIO</span>
+            <span>DESIGN STUDY BY HDD / HUYNH DIGITAL DFW</span>
           </div>
         </div>
       </footer>

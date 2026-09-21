@@ -5,7 +5,7 @@ import Link from 'next/link';
 import './juniper-studio.css';
 
 export const metadata: Metadata = {
-  title: 'Juniper Studio | Prototype — Ethan Web Studio',
+  title: 'Juniper Studio | Prototype — HDD',
   description:
     'Design study for a wellness studio: calm, editorial, appointment-first.',
 };
@@ -70,7 +70,7 @@ export default function JuniperStudioPage() {
       <header className="jn-header jn-shell">
         <div className="jn-header-row">
           <Link href="/#prototypes" className="jn-back">
-            ← BACK TO ETHAN WEB STUDIO
+            ← BACK TO HDD
           </Link>
           <div className="jn-wordmark">Juniper — Studio</div>
           <nav className="jn-nav">
@@ -253,7 +253,7 @@ export default function JuniperStudioPage() {
 
       <footer className="jn-footer jn-shell">
         <span>© 2026 JUNIPER STUDIO</span>
-        <span>DESIGN STUDY BY ETHAN WEB STUDIO</span>
+        <span>DESIGN STUDY BY HDD / HUYNH DIGITAL DFW</span>
       </footer>
     </div>
   );

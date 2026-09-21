@@ -18,32 +18,32 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: 'Ethan Web Studio | Websites for Small Businesses',
+  title: 'HDD | Huynh Digital DFW',
   description:
-    'Modern, easy-to-edit websites for small businesses in Dallas–Fort Worth, with six months of post-launch support included.',
+    'Modern, easy-to-edit websites for small businesses in Dallas–Fort Worth, built by Huynh Digital DFW with six months of post-launch support included.',
   openGraph: {
-    title: 'Ethan Web Studio | Websites for Small Businesses',
+    title: 'HDD | Huynh Digital DFW',
     description:
       'Modern, easy-to-edit websites with six months of post-launch support included.',
     type: 'website',
     images: [
       {
         url: '/og.png',
-        width: 1536,
-        height: 912,
-        alt: 'Ethan Web Studio — websites built specifically for you',
+        width: 1627,
+        height: 967,
+        alt: 'HDD — Huynh Digital DFW',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ethan Web Studio | Websites for Small Businesses',
+    title: 'HDD | Huynh Digital DFW',
     description:
       'Modern, easy-to-edit websites with six months of post-launch support included.',
     images: ['/og.png'],
   },
   icons: {
-    icon: '/ethan-web-studio-logo.png',
+    icon: '/hdd-logo.png',
   },
 };
 
