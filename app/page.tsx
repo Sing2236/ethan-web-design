@@ -243,14 +243,15 @@ export default function Home() {
             <span>SECTION</span>
             <strong>PROTOTYPE LIBRARY</strong>
             <span>STATUS</span>
-            <strong>CONCEPT WORK</strong>
+            <strong>2 CONCEPTS + 1 LIVE CLIENT</strong>
           </div>
           <div className="section-intro">
             <p className="kicker">EXAMPLE DIRECTIONS</p>
             <h2>THREE BUSINESSES. THREE DIFFERENT ANSWERS.</h2>
             <p className="section-copy">
-              These are design studies, not recycled templates or fake client
-              claims. Your site gets its own direction.
+              Two are design studies built to show direction, not recycled
+              templates. The third is a real, live client site. Your site
+              gets its own direction either way.
             </p>
           </div>
         </div>
@@ -314,34 +315,39 @@ export default function Home() {
             </footer>
           </Link>
 
-          <Link href="/prototypes/juniper-studio" className="prototype prototype-juniper">
+          <Link
+            href="https://kimsnailspapalestinecom.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="prototype prototype-juniper"
+          >
             <div className="prototype-rail">
-              <span>PROTOTYPE_03</span>
-              <span>WELLNESS</span>
+              <span>LIVE CLIENT SITE</span>
+              <span>NAIL SALON</span>
             </div>
             <div className="prototype-browser">
               <div className="proto-nav">
-                <b>JUNIPER—STUDIO</b>
-                <span>CARE&nbsp;&nbsp;&nbsp; TEAM&nbsp;&nbsp;&nbsp; JOURNAL</span>
+                <b>KIM&apos;S NAIL &amp; SPA</b>
+                <span>SERVICES&nbsp;&nbsp;&nbsp; GALLERY&nbsp;&nbsp;&nbsp; CONTACT</span>
               </div>
               <div className="juniper-layout">
                 <div className="juniper-copy">
-                  <small>A QUIETER KIND OF CARE</small>
-                  <strong>Make space<br />to feel better.</strong>
-                  <i>BOOK A VISIT</i>
+                  <small>PALESTINE, TX</small>
+                  <strong>Beautifully<br />done nails.</strong>
+                  <i>CALL TO BOOK</i>
                 </div>
                 <div className="juniper-poster" aria-hidden="true">
-                  <span>J</span>
-                  <i>01 / REST</i>
-                  <i>02 / RESET</i>
-                  <i>03 / RETURN</i>
+                  <span>K</span>
+                  <i>MANICURES</i>
+                  <i>PEDICURES</i>
+                  <i>NAIL ART</i>
                 </div>
               </div>
             </div>
             <footer>
               <div>
-                <span>WELLNESS CONCEPT</span>
-                <h3>Juniper Studio</h3>
+                <span>NAIL SALON · PALESTINE, TX</span>
+                <h3>Kim&apos;s Nail &amp; Spa</h3>
               </div>
               <ExternalLink aria-hidden="true" />
             </footer>

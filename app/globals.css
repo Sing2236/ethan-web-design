@@ -726,8 +726,11 @@ a {
 }
 
 .prototype-juniper {
-  background: #c4b7ff;
-  color: #2b155e;
+  /* Real client project: Kim's Nail & Spa (Palestine, TX) -- recolored to
+     match that site's actual brand palette instead of the old wellness
+     concept's lavender theme. */
+  background: #faf2d9;
+  color: #3a2f1f;
 }
 
 .juniper-layout {
@@ -751,8 +754,8 @@ a {
   flex-direction: column;
   justify-content: flex-end;
   padding: 1.5rem;
-  background: #2b155e;
-  color: #c4b7ff;
+  background: #3a2f1f;
+  color: #cfb086;
 }
 
 .juniper-poster span {
