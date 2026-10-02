@@ -199,6 +199,8 @@ a {
   justify-content: center;
   padding: clamp(3rem, 7vw, 7rem) clamp(2rem, 5vw, 5.5rem);
   border-right: 1px solid var(--line);
+  /* Lets the h1 size itself against this column instead of the viewport. */
+  container-type: inline-size;
 }
 
 .kicker {
@@ -221,7 +223,17 @@ a {
 }
 
 .hero h1 {
-  font-size: clamp(4rem, 7.6vw, 8.75rem);
+  /* "WEBSITES" is one unbreakable word, so a viewport-based size eventually
+     outgrows this column: past 1440px the grid stops widening while 7.6vw
+     keeps growing, and the opaque console -- which starts exactly where this
+     column ends -- painted over the last S (70px of it at 1920px wide).
+     The cqw cap is measured against the column itself, so it holds at every
+     width instead of only the ones I happened to check.
+
+     24cqw is the largest cap that keeps the word clear of the console at all
+     of them. Below ~1600px the cap sits above 7.6vw and so does nothing,
+     which keeps the heading exactly the size it was designed at. */
+  font-size: clamp(4rem, min(7.6vw, 24cqw), 8.75rem);
 }
 
 .hero h1 span {
